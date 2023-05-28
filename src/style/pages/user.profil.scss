@@ -1,0 +1,90 @@
+.profil-container{
+  display:flex;
+  width : 500px;
+  justify-content: space-between;
+}
+
+
+
+  //card documents
+  .card-profil {
+    position: relative;
+    width: 220px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    color :white
+  }
+  
+  .card-profil::before,
+  .card-profil::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.5s;
+  }
+  
+  .card-profil::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+  }
+  
+  .card-profil::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+  }
+  
+  .card-profil:hover::before,
+  .card-profil:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+  }
+  
+  .card-profil:hover:after {
+    content: "Voir mes documents";
+  }
+
+  .card-profil-documents:hover:after{
+    content : "Voir mes documents"
+  }
+
+  .card-munpieces:hover:after{
+    content : "Mun pièces"
+  }
+
+  .card-profil-documents::before,
+  .card-profil-documents::after{
+    background-color: #34a0a4;
+  }
+
+  .card-munpieces::before,
+  .card-munpieces::after{
+    background-color: #e85d04;
+  }
+
+  .card-munpieces{
+    background-color: #d00000;
+  }
+
+  .card-profil-documents{
+    background-color: #1a759f;
+  }
+
+
+  

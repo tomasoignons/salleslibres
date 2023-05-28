@@ -1,0 +1,227 @@
+//le container
+
+
+//la card
+
+.card-document-user {
+    margin : 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height : 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content-document-user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #e8e8e8;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content-document-user .heading-document-user {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  
+  .content-document-user .para-document-user {
+    line-height: 1.5;
+  }
+  
+  .content-document-user .btn-document-user {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-document-user::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card-document-user:hover::before {
+    height: 100%;
+  }
+  
+  .card-document-user:hover {
+    box-shadow: none;
+  }
+  
+  .card-document-user:hover .btn-document-user {
+    color: #212121;
+    background: #e8e8e8;
+  }
+  
+  .content-document-user .btn-document-user:hover {
+    outline: 2px solid #e8e8e8;
+    background: transparent;
+    color: #e8e8e8;
+  }
+  
+  .content-document-user .btn-document-user:active {
+    box-shadow: none;
+  }
+
+  .edit-document{
+    position : absolute;
+    left :  10px;
+    top : 10px;
+    transition  : ease 0.5s;
+  }
+
+  .delete-document{
+    position : absolute;
+    right : 10px;
+    top : 10px;
+    transition : ease 0.5s;
+  }
+
+  .delete-document svg, .edit-document svg{
+    transition: ease 0.5s;
+  }
+
+  .delete-document svg:hover{
+    stroke : #800000;
+    scale : 1.1;
+  }
+
+  .edit-document svg:hover{
+    stroke : #000080;
+    scale : 1.1;
+  }
+
+
+  //popup
+
+  .confirm-delete-popup{
+    padding : 15px;
+    width : 350px;
+    height: 150px;
+    position: absolute;
+    top : 200px;
+    background-color: white;
+    z-index: 3;
+    border-radius: 10px;
+    text-align: center;
+
+  }
+
+
+  //button hover stylé
+
+  .button-confirm-delete {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    font-size: 2em;
+  }
+  
+  /* button styling */
+  .confirm-delete-popup button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+   }
+   
+   .confirm-delete-popup button, .confirm-delete-popup span {
+    transition: 200ms;
+   }
+   
+   .confirm-delete-popup button .text {
+    transform: translateX(10px);
+    color: white;
+    font-weight: bold;
+   }
+   
+   .confirm-delete-popup button .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .confirm-delete-popup svg {
+    width: 15px;
+    fill: #eee;
+   }
+   
+   .confirm-delete-popup button:hover {
+    background: #ff3636;
+   }
+   
+   .confirm-delete-popup button:hover .text {
+    color: transparent;
+   }
+   
+   .confirm-delete-popup button:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+   }
+   
+   .confirm-delete-popup button:focus {
+    outline: none;
+   }
+   
+   .confirm-delete-popup button:active .icon svg {
+    transform: scale(0.8);
+   }
+
+   .confirm-delete-popup button {
+    background: #e62222;
+    position : absolute;
+    right : 10px;
+    bottom : 10px;
+   }
+
+   .conserver-document-button button{
+    background : #009900;
+    position : absolute;
+    left  :10px;
+    bottom : 10px;
+   }
+
+   .confirm-delete-popup button .icon {
+    border-left: 1px solid #c41b1b;
+   }
+
+   .conserver-document-button button .icon {
+    border-left: 1px solid #008000;
+   }
+
+   .conserver-document-button button:hover {
+    background: #2eda37;
+   }
+   

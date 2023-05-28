@@ -1,0 +1,240 @@
+
+.giga-container-document{
+    position : relative
+}
+
+.card-page-document {
+    margin-top : 40px;
+    width: 700px;
+    height: 500px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  
+.document-info-container{
+    padding : 20px 10px 50px 50px;
+}
+
+  .card-inner-page-document {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+  }
+  
+  .card-page-document:hover {
+    transform: scale(1.04) rotate(1deg);
+  }
+  
+  .circle-page-document {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#0000EF, #000080);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+  }
+  
+  .circle-page-document:nth-child(1) {
+    top: -25px;
+    left: -25px;
+  }
+  
+  .circle-page-document:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+  }
+  
+  @keyframes move-up6 {
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes move-down1 {
+    to {
+      transform: translateY(10px);
+    }
+  }
+
+
+  .document-title .titre{
+    color : white;
+    font-size: 1.2em;
+    margin-top : 10px;
+    text-decoration: underline;
+  }
+
+  .document-title .contenu{
+    color : #CCCCCC;
+    font-size : 1em;
+  }
+
+
+  //bouton de download
+
+
+  .button-download {
+    --width: 120px;
+    --height: 50px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #1163ff;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+    position : absolute;
+    bottom  : 30px;
+    right : 30px;
+  }
+  
+  .button-download::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: var(--tooltip-color);
+    font-size: 0.9rem;
+    color: #111;
+    border-radius: 0.25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+  }
+  
+  .button-download::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--tooltip-color);
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+  }
+  
+  .button-download::after,.button-download::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+  
+  .text-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-wrapper,.text-download,.icon-download {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+  }
+  
+  .text-download {
+    top: 0
+  }
+  
+  .text-download,.icon-download {
+    transition: top 0.5s;
+  }
+  
+  .icon-download {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-download svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .button-wrapper:hover {
+    background: #6c18ff;
+  }
+  
+  .button-wrapper:hover .text-download {
+    top: -100%;
+  }
+  
+  .button-wrapper:hover .icon-download {
+    top: 0;
+  }
+  
+  .button-wrapper:hover:before,.button-wrapper:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .button-wrapper:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+  }
+  
+  .button-wrapper:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+  }
+  
+
+  //popup
+
+  .popup-confirm{
+    position : absolute;
+    width : 600px;
+    height : 300px;
+    margin : auto;
+    top : 100px;
+    left :50px;
+    background-color: white;
+  }
+
+  .popup-croix{
+    position : absolute;
+    right : 20px;
+    top : 15px;
+    fill : blue;
+  }
+
+  .popup-confirm svg{
+    fill : blue;
+    transition : ease 0.3s;
+  }
+
+  .popup-croix svg:hover{
+    scale : 1.1;
+    color : red;
+  }
+
+  .content-popup{
+    position : absolute;
+    left : 25px;
+    top : 25px;
+    width : 500px;
+  }
+
+  .title-popup{
+    font-size : 1.2em;
+    margin-bottom : 50px;
+    color : #000080;
+    text-decoration: underline;
+  }
+
+.argent-popup, .cout-popup{
+    margin-bottom : 20px;
+  }
